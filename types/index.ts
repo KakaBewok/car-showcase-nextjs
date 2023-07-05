@@ -4,9 +4,10 @@ export interface ButtonProps {
     title: string;
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
+    btnType?: "button" | "submit";
 
     // isDisabled?: boolean;
-    // btnType?: "button" | "submit";
+    
     // textStyles?: string;
     // rightIcon?: string;
   }
