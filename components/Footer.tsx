@@ -5,6 +5,7 @@ import { footerLinks } from "@/constants";
 
 const Footer = () => (
   <footer className="flex flex-col mt-5 border-t border-gray-100 text-black-100">
+    {/* Top */}
     <div className="flex flex-wrap justify-between gap-5 px-6 py-10 max-md:flex-col sm:px-16">
       <div className="flex flex-col items-start justify-start gap-6">
         <Image
@@ -40,6 +41,7 @@ const Footer = () => (
       </div>
     </div>
 
+    {/* Bottom */}
     <div className="flex flex-wrap items-center justify-between px-6 py-10 mt-10 border-t border-gray-100 sm:px-16">
       <p>@2023 CarHub. All rights reserved</p>
 

@@ -4,7 +4,9 @@ import Image from "next/image";
 import Button from "./Button";
 
 const Hero = () => {
-  const handleScroll = () => {};
+  const handleScroll = () => {
+    alert("Test!");
+  };
 
   return (
     <div className="hero">

@@ -1,11 +1,17 @@
-import NavBar from "./Navbar";
+import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Button from './Button';
 import Footer from "./Footer";
+// import CustomFilter from "./CustomFilter";
+import SearchBar from "./SearchBar";
+import SearchManufacturer from "./SearchManufacturer";
 
 export {
-    NavBar,
+    Navbar,
     Hero,
     Button,
-    Footer
+    Footer,
+    // CustomFilter,
+    SearchBar,
+    SearchManufacturer
 }

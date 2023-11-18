@@ -7,7 +7,11 @@ export interface ButtonProps {
     btnType?: "button" | "submit";
 
     // isDisabled?: boolean;
-    
     // textStyles?: string;
     // rightIcon?: string;
+}
+
+export interface SearchManufacturerProps {
+    manufacturer: string;
+    setManufacturer: (manufacturer: string) => void;
   }
