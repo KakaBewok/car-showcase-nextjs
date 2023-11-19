@@ -39,21 +39,10 @@ const SearchBar = () => {
     const searchParams = new URLSearchParams(window.location.search);
 
     // Update or delete the 'model' & 'manufacturer' search parameter based on its value
-    if (model) {
-      searchParams.set("model", model);
-    } else {
-      searchParams.delete("model");
-    }
-    if (manufacturer) {
-      searchParams.set("manufacturer", manufacturer);
-    } else {
-      searchParams.delete("manufacturer");
-    }
-
-    // model ? searchParams.set("model", model) : searchParams.delete("model");
-    // manufacturer
-    //   ? searchParams.set("manufacturer", manufacturer)
-    //   : searchParams.delete("manufacturer");
+    model ? searchParams.set("model", model) : searchParams.delete("model");
+    manufacturer
+      ? searchParams.set("manufacturer", manufacturer)
+      : searchParams.delete("manufacturer");
 
     // Generate the new pathname with the updated search parameters
     const newPathname = `${

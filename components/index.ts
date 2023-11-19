@@ -10,8 +10,9 @@ export {
     Navbar,
     Hero,
     Button,
-    Footer,
     // CustomFilter,
+    SearchManufacturer,
     SearchBar,
-    SearchManufacturer
+    Footer,
+    
 }
