@@ -38,7 +38,7 @@ const SearchBar = () => {
     // Create a new URLSearchParams object using the current URL search parameters
     const searchParams = new URLSearchParams(window.location.search);
 
-    // Update or delete the 'model' & 'manufacturer' search parameter based on its value
+    // Update or delete the 'model' & 'manufacturer' search parameters based on its value
     model ? searchParams.set("model", model) : searchParams.delete("model");
     manufacturer
       ? searchParams.set("manufacturer", manufacturer)
