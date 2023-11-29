@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { CarProps } from "@/types";
 import Button from "./Button";
-import { generateCarImageUrl } from "@/utils";
+import { calculateCarRent, generateCarImageUrl } from "@/utils";
 
 interface CarCardProps {
   car: CarProps;
@@ -12,6 +12,10 @@ interface CarCardProps {
 
 const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const carRent = calculateCarRent(city_mpg, year);
 
   return (
     <div className="car-card group">
@@ -25,19 +29,20 @@ const CarCard = ({ car }: CarCardProps) => {
         <span className="self-start text-[14px] leading-[17px] font-semibold">
           $
         </span>
+        {carRent}
         <span className="self-end text-[14px] leading-[17px] font-medium">
           /day
         </span>
       </p>
 
       <div className="relative object-contain w-full h-40 my-3">
-        {/* <Image
-          src={generateCarImageUrl(car)}
+        <Image
+          src="/hero.png"
           alt="car model"
           fill
           priority
           className="object-contain"
-        /> */}
+        />
       </div>
 
       <div className="relative flex w-full mt-2">
