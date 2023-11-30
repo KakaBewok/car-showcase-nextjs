@@ -5,11 +5,17 @@ export interface ButtonProps {
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
     btnType?: "button" | "submit";
-
-    // isDisabled?: boolean;
-    // textStyles?: string;
-    // rightIcon?: string;
 }
+
+export interface CustomButtonProps {
+    isDisabled?: boolean;
+    btnType?: "button" | "submit";
+    containerStyles?: string;
+    textStyles?: string;
+    title: string;
+    rightIcon?: string;
+    handleClick?: MouseEventHandler<HTMLButtonElement>;
+  }
 
 export interface SearchManufacturerProps {
     manufacturer: string;
@@ -40,3 +46,4 @@ export interface CarProps {
 //     drive: string;
 //     cityMPG: number;
 //   }
+
