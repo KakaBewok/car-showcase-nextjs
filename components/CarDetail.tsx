@@ -41,7 +41,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
               <Dialog.Panel className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5">
                 <button
                   type="button"
-                  className="absolute z-10 p-2 rounded-full top-2 right-2 w-fit bg-primary-blue-100"
+                  className="absolute z-10 p-2 rounded-full top-3 right-3 w-fit bg-primary-blue-100"
                   onClick={closeModal}
                 >
                   <Image
@@ -109,7 +109,13 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                         <h4 className="capitalize text-grey">
                           {key.split("_").join(" ")}
                         </h4>
-                        <p className="font-semibold text-black-100">{value}</p>
+                        <p className="font-medium text-black-100">
+                          {key === "transmission" && value === "a"
+                            ? "Automatic"
+                            : key !== "transmission"
+                            ? value
+                            : "Manual"}
+                        </p>
                       </div>
                     ))}
                   </div>

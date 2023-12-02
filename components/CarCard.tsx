@@ -22,7 +22,7 @@ const CarCard = ({ car }: CarCardProps) => {
     <div className="cursor-pointer car-card group">
       <div className="car-card__content">
         <h2 className="car-card__content-title">
-          {make} {model}
+          {make} - {model}
         </h2>
       </div>
 

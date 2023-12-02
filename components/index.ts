@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import SearchBar from "./SearchBar";
 import SearchManufacturer from "./SearchManufacturer";
 import CarCard from "./CarCard";
+import CarDetails from "./CarDetail";
 
 export {
     Navbar,
@@ -15,6 +16,6 @@ export {
     SearchManufacturer,
     SearchBar,
     CarCard,
+    CarDetails,
     Footer,
-    
 }
