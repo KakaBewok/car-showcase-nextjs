@@ -30,7 +30,7 @@ export default function CustomFilter({ title, options }: CustomFilterProps) {
         <div className="relative z-10 w-fit">
           {/* Button for the listbox */}
           <Listbox.Button className="custom-filter__btn">
-            {/* <span className="block truncate">{selected.title}</span> */}
+            <span className="block truncate">{selected.title}</span>
             <Image
               src="/chevron-up-down.svg"
               width={20}
