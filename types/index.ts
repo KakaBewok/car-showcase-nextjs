@@ -49,6 +49,23 @@ export interface HomeProps {
   searchParams: FilterProps;
 }
 
+export interface CustomFilterProps {
+  title: string;
+  options: OptionProps[];
+}
+
+export interface OptionProps {
+  title: string;
+  value: string;
+}
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
+}
+
+
+
 //   export interface CarCardProps {
 //     model: string;
 //     make: string;
