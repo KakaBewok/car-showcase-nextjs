@@ -5,7 +5,11 @@ import Button from "./Button";
 
 const Hero = () => {
   const handleScroll = () => {
-    alert("Test!");
+    const nextSection = document.getElementById("discover");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
