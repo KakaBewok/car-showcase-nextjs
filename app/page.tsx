@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { CarCard, Hero, SearchBar, ShowMore } from "@/components";
 import { fetchCars } from "@/utils";
-import { HomeProps } from "@/types";
 import CustomFilter from "@/components/CustomFilter";
 import { fuels, yearsOfProduction } from "@/constants";
 import { useEffect, useState } from "react";
@@ -16,7 +15,7 @@ export default function Home() {
   const [model, setModel] = useState("");
   //filter states
   const [fuel, setFuel] = useState("");
-  const [year, setYear] = useState(2022);
+  const [year, setYear] = useState("2022");
   //pagination states
   const [limit, setLimit] = useState(10);
 
@@ -42,8 +41,6 @@ export default function Home() {
     getCars();
   }, [manufacturer, model, fuel, year, limit]);
 
-  // const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
-
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -56,11 +53,11 @@ export default function Home() {
           <SearchBar setManufacturer={setManufacturer} setModel={setModel} />
 
           <div className="home__filter-container">
-            <CustomFilter title="fuel" options={fuels} setFuel={setFuel} />
+            <CustomFilter title="fuel" options={fuels} setFilter={setFuel} />
             <CustomFilter
               title="year"
               options={yearsOfProduction}
-              setYear={setYear}
+              setFilter={setYear}
             />
           </div>
         </div>
@@ -95,6 +92,18 @@ export default function Home() {
           <div className="home__error-container">
             <h2 className="text-xl font-bold text-black">Oops, no results</h2>
             {/* <p>{allCars?.message}</p> */}
+
+            {loading && (
+              <div className="w-full mt-16 flex-center">
+                <Image
+                  src="/loader.svg"
+                  alt="loading..."
+                  width={50}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -39,7 +39,7 @@ export interface CarProps {
 
 export interface FilterProps {
   manufacturer?: string;
-  year?: number;
+  year?: string;
   model?: string;
   limit?: number;
   fuel?: string;
@@ -53,6 +53,7 @@ export interface SearchBarProps {
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+  setFilter: (value: string) => void;
 }
 
 export interface OptionProps {
@@ -63,17 +64,6 @@ export interface OptionProps {
 export interface ShowMoreProps {
   pageNumber: number;
   isNext: boolean;
+  setLimit: (limit : number) => void;
 }
-
-
-
-//   export interface CarCardProps {
-//     model: string;
-//     make: string;
-//     mpg: number;
-//     transmission: string;
-//     year: number;
-//     drive: string;
-//     cityMPG: number;
-//   }
 
