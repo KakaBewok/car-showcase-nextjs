@@ -75,8 +75,8 @@ export default function Home() {
                 <Image
                   src="/loader.svg"
                   alt="loading..."
-                  width={50}
-                  height={50}
+                  width={80}
+                  height={80}
                   className="object-contain"
                 />
               </div>
@@ -90,16 +90,15 @@ export default function Home() {
           </section>
         ) : (
           <div className="home__error-container">
-            <h2 className="text-xl font-bold text-black">Oops, no results</h2>
-            {/* <p>{allCars?.message}</p> */}
+            {/* <h2 className="text-xl font-bold text-black">Oops, no results</h2> */}
 
             {loading && (
               <div className="w-full mt-16 flex-center">
                 <Image
                   src="/loader.svg"
                   alt="loading..."
-                  width={50}
-                  height={50}
+                  width={80}
+                  height={80}
                   className="object-contain"
                 />
               </div>
